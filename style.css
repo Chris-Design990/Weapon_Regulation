@@ -25,7 +25,55 @@ body {
 	background-color: darkred;
 }
 
-
 .animated-text{
-
+	font-size: 100px;
+	font-weight: 600;
+	min-width: 280px;
 }
+
+.animated-text span {
+	position: relative;
+}
+
+.animated-text span:before {
+	content: "Why are you looking for a gun?";
+	color: lightyellow;
+	animation: words 20s infinite;
+}
+
+.animated-text span:after {
+	content: "Why are you looking for a gun?";
+	position: absolute;
+	width:calc(100% + 8px);
+	height: 100%;
+	background-color: darkred;
+	border-left: 2px solid lightyellow;
+	right: -8px;
+	animation: cursor .8s infinite, typing 1s steps(14) infinite;
+}
+
+@keyframes cursor {
+	to{
+		border-left: 2px solid darkred;
+	}
+}
+
+@keyframes words {
+	0%,,20%,40%,60%,80%,100%{
+		content: "Why are you looking for a gun?";
+	}
+}
+@keyframes typing {
+	10%,15%,40%,60%,80%,90%,95%{
+		width: 0;
+	}
+	10%,15%,40%,60%,80%,90%,95%{
+		width: calc(100% + 8px);
+	}
+}
+
+
+
+
+
+
