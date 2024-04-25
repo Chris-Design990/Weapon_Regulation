@@ -26,7 +26,8 @@ body {
 }
 
 .animated-text{
-	font-size: 120px;
+	font-family: "Helvetica";
+	font-size: 100px;
 	font-weight: 600;
 	min-width: 280px;
 }
