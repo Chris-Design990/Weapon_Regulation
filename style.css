@@ -1,0 +1,26 @@
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+  font-size: 100px;
+  font-family: "Helvetica";
+  color: lightyellow;
+}
+
+h1 {
+	font-family: "Verdana";
+	color: lightyellow;
+}
+
+p{
+	font-family: "Courier New";
+	color: lightyellow;
+}
+
+body {
+	background-color: darkcyan;
+}
