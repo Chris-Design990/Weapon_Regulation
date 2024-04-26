@@ -6,7 +6,7 @@ img{
 }
 
 h2 {
-  font-size: 100px;
+  font-size: 120px;
   font-family: "Helvetica";
   color: lightyellow;
 }
@@ -21,60 +21,122 @@ p{
 	color: lightyellow;
 }
 
+.one {
+	color: darkred;
+}
+
 body {
-	background-color: darkred;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: black;
 }
 
-.animated-text{
-	font-family: "Helvetica";
-	font-size: 100px;
-	font-weight: 600;
-	min-width: 280px;
+.background {
+	border: 10px solid;
+  padding: 15px;
+  background: lightgrey;
+  background-clip: border-box;  
+}
+.wrapper{
+	display: flex;
 }
 
-.animated-text span {
+.wrapper .dynamic-txt {
+	margin-left: 15px;
+	line-height: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+
+.dynamic-txt li{
+	list-style: none;
+	color: red;
+	font-size: 120px;
+	font-weight: 500;
+	top: 10;
+	position: relative;
+	animation: slide 5s steps(0) infinite;
+}
+
+@keyframes slide{
+	100%{
+		top: -360px;
+	}
+}
+
+.dynamic-txt li{
 	position: relative;
 }
 
-.animated-text span:before {
-	content: "Why are you looking for a gun?";
-	color: lightyellow;
-	animation: words 20s infinite;
-}
-
-.animated-text span:after {
-	content: "Why are you looking for a gun?";
+.dynamic-txt li::after {
+	content: "";
 	position: absolute;
-	width:calc(100% + 8px);
+	left: 0;
 	height: 100%;
-	background-color: darkred;
-	border-left: 2px solid lightyellow;
-	right: -8px;
-	animation: cursor .8s infinite, typing 1s steps(14) infinite;
+	width: 100%;
+	background-color: black;
+	border-left: 2px solid #black;
+	animation: typing 4s steps(31)
+	infinite;
 }
 
-@keyframes cursor {
-	to{
-		border-left: 2px solid darkred;
+@keyframes typing{
+	20%,
+	100%{
+		left: calc(100% + 30px);
+	}
+	100%{
+		left: 0;
 	}
 }
 
-@keyframes words {
-	0%,,20%,40%,60%,80%,100%{
-		content: "Why are you looking for a gun?";
-	}
-}
-@keyframes typing {
-	10%,15%,40%,60%,80%,90%,95%{
-		width: 10px;
-	}
-	10%,15%,40%,60%,80%,90%,95%{
-		width: calc(100% + 8px);
-	}
+.arrow-body {
+	position:relative; 
+	left: -300px; 
+	top: 250px;
+	display: flex;
+	justify-content: right;
 }
 
+.arrow {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-top: 12px solid #fff; 
+	border-left: 12px solid #fff; 
+	transform: rotate(-45deg);
+	animation: arrow-load 2s infinite;
+}
 
+.arow:nth-child(1){
+	left: 25px;
+	animation-delay: -0.4s;
+}
 
+.arow:nth-child(2){
+	animation-delay: -0.2s;
+}
+
+.arow:nth-child(3){
+	right: 25px;
+}
+
+@keyframes arrow-load{
+	0%{
+		opacity: 0;
+		transform: rotate(-45deg) translate(60px,60px);
+	}
+	0%{
+		opacity: 1;
+		transform: rotate(-45deg) translate(60px,60px);
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(-45deg) translate(60px,60px);
+	}
+}
 
 
 
