@@ -22,14 +22,14 @@ p{
 }
 
 .one {
-	color: darkred;
+	color: yellow;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: black;
+	background-color: green;
 }
 
 .background {
@@ -52,12 +52,12 @@ body {
 
 .dynamic-txt li{
 	list-style: none;
-	color: red;
+	color: yellow;
 	font-size: 120px;
 	font-weight: 500;
 	top: 10;
 	position: relative;
-	animation: slide 5s steps(0) infinite;
+	animation: slide 4s steps(0) infinite;
 }
 
 @keyframes slide{
@@ -76,9 +76,9 @@ body {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: black;
+	background-color: green;
 	border-left: 2px solid #black;
-	animation: typing 4s steps(31)
+	animation: typing 4s steps(24)
 	infinite;
 }
 
