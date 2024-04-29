@@ -22,7 +22,7 @@ p{
 }
 
 .one {
-	color: yellow;
+	color: green;
 }
 
 body {
@@ -38,6 +38,16 @@ body {
   background: lightgrey;
   background-clip: border-box;  
 }
+
+.official{
+	border: 10px solid;
+	border-color: lightyellow;
+	color: black;
+	background: lightgreen;
+	padding: 15px;
+	background-clip: border-box;  
+}
+
 .wrapper{
 	display: flex;
 }
@@ -78,7 +88,7 @@ body {
 	width: 100%;
 	background-color: green;
 	border-left: 2px solid #black;
-	animation: typing 4s steps(24)
+	animation: typing 4s steps(28)
 	infinite;
 }
 
@@ -137,6 +147,7 @@ body {
 		transform: rotate(-45deg) translate(60px,60px);
 	}
 }
+
 
 
 
